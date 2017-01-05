@@ -1,0 +1,49 @@
+{
+  "name": "backbone-marionette3-form-example",
+  "description": "Form made with Backbone.js, Marionette v3 and love",
+  "author": "Constantin Gorgan",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "start": "grunt start",
+    "build": "eslint app && grunt build",
+    "test": "echo test"
+  },
+  "dependencies": {
+    "backbone": "~1.3.3",
+    "backbone.marionette": "~3.0.0",
+    "bootstrap": "^3.3.7",
+    "jquery": "~1.12.2",
+    "underscore": "^1.7.0"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.6.0",
+    "babelify": "^7.2.0",
+    "eslint": "^2.11.1",
+    "grunt": "^1.0.0",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-browserify": "^4.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "jstify": "^0.14.0",
+    "node-sass": "^3.11.2"
+  },
+  "browser": {
+    "bootstrap": "./node_modules/bootstrap/dist/js/bootstrap.min.js",
+  },
+  "browserify-shim": {
+    "bootstrap": {
+      "depends": [
+        "jquery:jQuery"
+      ]
+    }
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  }
+}
