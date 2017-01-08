@@ -61,9 +61,45 @@ a:link, a:hover, a:active, a:visited
   text-decoration: none
 // Common
 // ------------------------
+.loader
+  position: fixed
+  height: 100%
+  width: 100%
+  color: white
+  z-index: 999
+  background-color: rgba(0,0,0,0.5)
+  display: none  
+.loading_message
+  $loading-message-padding: 20px
+  position: fixed
+  top: 50%
+  left: 50%
+  margin-left: - ($loading-message-padding)
+  margin-top: - ($loading-message-padding)
+  background-image: url("img/loader_HA.gif")
+  padding: $loading-message-padding
+  background-repeat: no-repeat
+  background-position: center
+  border-radius: 5px
+  background-color: #fff
+span.spin
+  width: 16px
+  height: 16px
+  margin-top: 10px
+  display: inline-block
+  background-image: url("img/loader_HA.gif")
+.black_overlay
+  position: fixed
+  height: 100%
+  width: 100%
+  color: white
+  z-index: 9
+  background-color: rgba(0, 0, 0, 0.5)
+  display: none
+  
 .clear 
-    clear: both
+  clear: both
 .right 
-    float: right
+  float: right
 .left 
-    float: left
+  float: left
