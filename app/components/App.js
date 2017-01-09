@@ -11,6 +11,10 @@ export default Marionette.Application.extend({
       this.Router = new Router({
         controller: new Controller()
       })
+      
+      // Just for example purposes
+      sessionStorage.userName = 'Krasniqi Alexander'
+      
       Backbone.history.start()
     })
   }
