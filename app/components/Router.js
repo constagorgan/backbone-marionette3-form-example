@@ -1,8 +1,14 @@
+/* global sessionStorage */
 import {Marionette} from '../../vendor/vendor'
 import Controller from './Controller'
 
 export default Marionette.AppRouter.extend({
   controller: Controller,
+
+  // Just for example purposes
+  execute: function () {
+    sessionStorage.userName = 'Krasniqi Alexander'
+  },
 
 // ----------------------------------------
 // --- REUSABLE CODE FOR OTHER PROJECTS ---
