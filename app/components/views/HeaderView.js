@@ -11,8 +11,7 @@ export default Marionette.View.extend({
   events: {
     'click .header_btn': 'toggleSideMenu'
   },
-  toggleSideMenu: function (e) {
-//    if($('.menu_mobile').hasClass('display_inline_block')) {
+  toggleSideMenu: function () {
       if($('.menu_mobile').hasClass('display_inline_block')) {
       $(event.target).removeClass('header_btn_close')
       $('.menu_mobile').removeClass('display_inline_block')
