@@ -54,6 +54,8 @@ html, body
   height: 100%
   color: $text_color_dark
 h1,h2,h3,h4,h5,h6
+  margin: 0
+  line-height: 100%;
   font-family: $heading_font
 p
   line-height: 100%
@@ -103,3 +105,37 @@ span.spin
   float: right
 .left 
   float: left
+// Header - header upper
+// ------------------------
+.header_upper
+  padding: 10px;
+  position: relative;
+.header_upper_content_container
+  float: right;
+.purple_outline_btn
+  text-transform: uppercase
+  color: $purple
+  border-color: $purple
+  padding: 11px 20px
+  line-height: 100%;
+  margin-right: 20px;
+.purple_outline_btn:hover
+  background-color: $purple
+  border-color: $purple
+.account_image_round
+  width: 40px
+  height: 40px
+  border-radius: 50%
+.header_lower
+  background: url(./img/hands-typing-laptop.jpg) center center;
+  position: relative;
+.purple_overlay
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(104,0,110,0.9);
+.page_title
+  margin: 45px 0;
+  font-size: 40px;
+  color: #fff;
+  font-family: $heading_font;
