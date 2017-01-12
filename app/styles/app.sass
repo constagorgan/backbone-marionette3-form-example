@@ -55,10 +55,12 @@ html, body
   color: $text_color_dark
 h1,h2,h3,h4,h5,h6
   margin: 0
-  line-height: 100%;
+  line-height: 100%
+  color: $text_color_dark
   font-family: $heading_font
 p
   line-height: 100%
+  color: $text_color_dark
 a:link, a:hover, a:active, a:visited
   text-decoration: none
 // Common
@@ -105,26 +107,32 @@ span.spin
   float: right
 .left 
   float: left
+.error
+  color: $red
+.ellipsis
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
 .display_inline_block
   display: inline-block !important
 // Header - header upper
 // ------------------------
 .header_upper
-  padding: 10px 0;
-  position: relative;
-  max-width: 100%;
-  margin: 0;
+  padding: 10px 0
+  position: relative
+  max-width: 100%
+  margin: 0
 .header_content
-  position: relative;
+  position: relative
 .header_upper_content_container
-  float: right;
+  float: right
 .purple_outline_btn
   text-transform: uppercase
   color: $purple
   border-color: $purple
   padding: 11px 20px
-  line-height: 100%;
-  margin-right: 20px;
+  line-height: 100%
+  margin-right: 20px
 .purple_outline_btn:hover
   background-color: $purple
   border-color: $purple
@@ -133,69 +141,97 @@ span.spin
   height: 40px
   border-radius: 50%
 .header_lower
-  background: url(./img/hands-typing-laptop.jpg) center center;
-  position: relative;
+  background: url(./img/hands-typing-laptop.jpg) center center
+  position: relative
 .header_lower .row
-  max-width: 100%;
+  max-width: 100%
 .purple_overlay
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background: rgba(104,0,110,0.9);
-.page_title
-  margin: 45px 15px;
-  font-size: 40px;
-  color: #fff;
-  font-family: $heading_font;
+  width: 100%
+  height: 100%
+  position: absolute
+  background: rgba(104,0,110,0.9)
+.page_title_big
+  margin: 45px 15px
+  font-size: 40px
+  color: #fff
 .header_btn
-  margin: 0;
-  display: inline-block;
-  width: 30px;
-  height: 22px;
-  background: url(./img/mobile_menu_icon.png);
-  background-repeat: no-repeat;
-  background-size: 30px auto;
-  top: 50%;
-  transform: translate(0, -50%);
-  position: relative;
-  display: inline-block;
+  margin: 0
+  display: inline-block
+  width: 30px
+  height: 22px
+  background: url(./img/mobile_menu_icon.png)
+  background-repeat: no-repeat
+  background-size: 30px auto
+  top: 50%
+  transform: translate(0, -50%)
+  position: relative
+  display: inline-block
 .header_btn_close
-  background: url(./img/close_icon.png);
-  background-repeat: no-repeat;
-  background-size: auto 22px;
+  background: url(./img/close_icon.png)
+  background-repeat: no-repeat
+  background-size: auto 22px
 .menu_mobile
-  display: none;
-  background-color: $light_gray;
-  position: absolute;
-  top: 50px;
-  left: 0;
-  z-index: 9;
-  text-align: center;
-  width: 100%;
-  -webkit-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.5);
-  -moz-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.5);
-  box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.5);
+  display: none
+  background-color: $light_gray
+  position: absolute
+  top: 50px
+  left: 0
+  z-index: 9
+  text-align: center
+  width: 100%
+  -webkit-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.5)
+  -moz-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.5)
+  box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.5)
 .menu_mobile > a
-  display: block;
-  color: $purple;
-  width: 100%;
-  padding: 5px 0;
-  position: relative;
+  display: block
+  color: $purple
+  width: 100%
+  padding: 5px 0
+  position: relative
 .menu_mobile > a:first-child
-  border-top: 1px $purple solid;
+  border-top: 1px $purple solid
 .menu_mobile > a::before
-  content: '';
-  display: block;
-  position: absolute;
-  bottom: 0;
-  width: 20%;
-  left: 40%;
-  border-bottom: 1px $purple solid;
+  content: ''
+  display: block
+  position: absolute
+  bottom: 0
+  width: 20%
+  left: 40%
+  border-bottom: 1px $purple solid
 .menu_mobile > a:last-child::before
-  content: '';
-  display: block;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  left: 0%;
-  border-bottom: 1px $purple solid;
+  content: ''
+  display: block
+  position: absolute
+  bottom: 0
+  width: 100%
+  left: 0%
+  border-bottom: 1px $purple solid
+// Views common elements
+// ------------------------
+.content
+  padding: 15px
+.page_title
+  font-size: 30px
+  padding: 30px 0
+.page_subtitle
+  font-size: 24px
+  border-bottom: 1px solid #c7c7c7
+.page_subtitle_small
+  font-size: 16px
+  font-weight: bold
+.purple_text_floating_right
+  position: absolute
+  right: 0
+  color: #68006e
+  font-size: 16px
+  display: block
+  top: 50%
+  transform: translate(0, -50%)
+// ------------------------
+#acc_info_page_subtitle
+  padding: 10px 0
+#acc_info_page_subtitle_small
+  padding: 20px 0
+  max-width: calc(100% - 80px)
+.info_email_container
+  position: relative

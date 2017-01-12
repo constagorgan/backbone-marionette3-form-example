@@ -14,6 +14,7 @@ export default Marionette.Application.extend({
       
       // Just for example purposes
       sessionStorage.userName = 'Krasniqi Alexander'
+      sessionStorage.email = 'a.krasniqi@company.nl'
       
       Backbone.history.start()
     })

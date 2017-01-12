@@ -1,8 +1,17 @@
 <div id="header"></div>
 <div style="clear: both"></div>
 
-<div id="content">
-  <h1>This is the "Account Information" page</h1>
+<div class="content">
+  <h2 class="page_title">Account Information</h2>
+  <h3 id="acc_info_page_subtitle" class="page_subtitle">Email address</h3>
+  <div class="info_email_container">
+    <% if(sessionStorage.email) { %>
+      <h4 id="acc_info_page_subtitle_small" class="page_subtitle_small ellipsis"><%= sessionStorage.email %></h4>
+    <% } else { %>
+      <p class="page_subtitle_small error">An error occured trying to display email address</p>
+    <% } %>
+    <span class="purple_text_floating_right">modify</span>
+  </div>
 </div>
 
 <div style="clear: both"></div>

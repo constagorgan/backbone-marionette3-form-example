@@ -54,10 +54,12 @@ html, body {
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   line-height: 100%;
+  color: #333;
   font-family: "Facit"; }
 
 p {
-  line-height: 100%; }
+  line-height: 100%;
+  color: #333; }
 
 a:link, a:hover, a:active, a:visited {
   text-decoration: none; }
@@ -109,6 +111,14 @@ span.spin {
 .left {
   float: left; }
 
+.error {
+  color: #cf0000; }
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
 .display_inline_block {
   display: inline-block !important; }
 
@@ -154,11 +164,10 @@ span.spin {
   position: absolute;
   background: rgba(104, 0, 110, 0.9); }
 
-.page_title {
+.page_title_big {
   margin: 45px 15px;
   font-size: 40px;
-  color: #fff;
-  font-family: "Facit"; }
+  color: #fff; }
 
 .header_btn {
   margin: 0;
@@ -218,3 +227,37 @@ span.spin {
   width: 100%;
   left: 0%;
   border-bottom: 1px #68006e solid; }
+
+.content {
+  padding: 15px; }
+
+.page_title {
+  font-size: 30px;
+  padding: 30px 0; }
+
+.page_subtitle {
+  font-size: 24px;
+  border-bottom: 1px solid #c7c7c7; }
+
+.page_subtitle_small {
+  font-size: 16px;
+  font-weight: bold; }
+
+.purple_text_floating_right {
+  position: absolute;
+  right: 0;
+  color: #68006e;
+  font-size: 16px;
+  display: block;
+  top: 50%;
+  transform: translate(0, -50%); }
+
+#acc_info_page_subtitle {
+  padding: 10px 0; }
+
+#acc_info_page_subtitle_small {
+  padding: 20px 0;
+  max-width: calc(100% - 80px); }
+
+.info_email_container {
+  position: relative; }
