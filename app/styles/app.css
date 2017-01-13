@@ -241,7 +241,9 @@ span.spin {
 
 .page_subtitle_small {
   font-size: 16px;
-  font-weight: bold; }
+  font-weight: bold;
+  margin: 0;
+  max-width: calc(100% - 60px); }
 
 .purple_text_floating_right {
   position: absolute;
@@ -252,12 +254,48 @@ span.spin {
   top: 50%;
   transform: translate(0, -50%); }
 
-#acc_info_page_subtitle {
+.acc_info_page_subtitle {
   padding: 10px 0; }
 
-#acc_info_page_subtitle_small {
+.acc_info_page_subtitle_small {
   padding: 20px 0;
   max-width: calc(100% - 80px); }
 
+.content .spacer {
+  margin-bottom: 40px; }
+
 .info_email_container {
   position: relative; }
+
+.info_social_accounts_p {
+  padding: 20px 0; }
+
+.social_accounts_row {
+  margin-bottom: 10px; }
+
+.social_icon {
+  width: 28px;
+  height: 28px; }
+
+.social_icon_span {
+  margin-left: 5px;
+  line-height: 28px; }
+
+.social_icon_a {
+  margin-left: 5px;
+  color: #157d9b !important; }
+
+.profile_photo {
+  max-width: 120px;
+  max-height: 120px;
+  margin-top: 10px; }
+
+.info_delete_account_p {
+  padding: 20px 0; }
+
+.job_alerts_a {
+  margin-left: 5px;
+  color: #157d9b !important; }
+
+#info_delete_account_title {
+  margin-bottom: 20px; }

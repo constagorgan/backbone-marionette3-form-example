@@ -3,14 +3,44 @@
 
 <div class="content">
   <h2 class="page_title">Account Information</h2>
-  <h3 id="acc_info_page_subtitle" class="page_subtitle">Email address</h3>
-  <div class="info_email_container">
+  <h3 class="page_subtitle acc_info_page_subtitle">Email address</h3>
+  <div class="info_email_container spacer">
     <% if(sessionStorage.email) { %>
-      <h4 id="acc_info_page_subtitle_small" class="page_subtitle_small ellipsis"><%= sessionStorage.email %></h4>
+      <h4 class="page_subtitle_small acc_info_page_subtitle_small ellipsis"><%= sessionStorage.email %></h4>
     <% } else { %>
       <p class="page_subtitle_small error">An error occured trying to display email address</p>
     <% } %>
     <span class="purple_text_floating_right">modify</span>
+  </div>
+  <div class="info_social_accounts_container spacer">
+    <h3 class="page_subtitle acc_info_page_subtitle">Social accounts</h3>
+    <p class="info_social_accounts_p">Connect social accounts - quick and easy access to your social accounts</p>
+    <div class="social_accounts_row">
+      <img class="social_icon" src="img/FB_icon.png">
+      <span class="social_icon_span">Not linked</span><a class="social_icon_a" href="http://facebook.com" target="_blank">register via Facebook</a>
+    </div>
+    <div class="social_accounts_row">
+      <img class="social_icon" src="img/LI_icon.png">
+      <span class="social_icon_span">Not linked</span><a class="social_icon_a" href="http://linkedin.com" target="_blank">register via Linkedin</a>
+    </div>
+    <div class="social_accounts_row">
+      <img class="social_icon" src="img/GP_icon.png">
+      <span class="social_icon_span">Not linked</span><a class="social_icon_a" href="http://plus.google.com" target="_blank">register via Googleplus</a>
+    </div>
+  </div>
+  <div class="info_profile_photo_container spacer">
+    <h3 class="page_subtitle acc_info_page_subtitle">Profile photo</h3>
+    <img class="profile_photo" src="./img/no-pic.png">
+  </div>
+  <div class="info_user_info_container spacer">
+    <h3 class="page_subtitle acc_info_page_subtitle">User info</h3>
+  </div>
+  <div class="info_change_password_container spacer">
+    <h3 id="acc_info_page_subtitle" class="page_subtitle">Change password</h3>
+  </div>
+  <div class="info_delete_account_container spacer">
+    <h3 id="info_delete_account_title" class="page_subtitle acc_info_page_subtitle">Delete account</h3>
+    <span class="info_delete_account_p">You can also delete your account rather than</span><a class="job_alerts_a" href="#job_alerts">expand your Job Alerts</a>
   </div>
 </div>
 
