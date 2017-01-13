@@ -1,10 +1,11 @@
 // Variables
 // ------------------------
 $purple: #68006e
+$red: #cf0000
 $orange: #f48400
+$dark_orange: #de7800
 $light_gray: #f0f0f0
 $dark_gray: #212121
-$red: #cf0000
 $text_color_dark: #333
 $text_color_light: #c7c7c7
 $heading_font: "Facit"
@@ -107,12 +108,55 @@ span.spin
   float: right
 .left 
   float: left
+
 .error
   color: $red
+
 .ellipsis
   white-space: nowrap
   overflow: hidden
   text-overflow: ellipsis
+.half_width
+  width: calc(50% - 3px)
+  display: inline-block
+
+.purple_outline_btn
+  text-transform: uppercase
+  color: $purple
+  border-color: $purple
+  padding: 11px 20px
+  line-height: 100%
+  margin-right: 20px
+  border-radius: 3px
+.purple_outline_btn:hover
+  background-color: $purple
+  border-color: $purple
+.red_outline_btn
+  text-transform: lowercase
+  color: $red
+  border-color: $red
+  padding: 11px 30px
+  line-height: 100%
+  margin-right: 20px
+  border-radius: 3px
+.red_outline_btn:hover
+  background-color: $red
+  border-color: $red
+.orange_btn
+  text-transform: lowercase
+  color: #fff
+  border-color: $orange
+  background-color: $orange
+  padding: 11px 30px
+  line-height: 100%
+  font-size: 16px
+  margin-left: auto
+  display: block
+  border-radius: 3px
+.orange_btn:hover
+  background-color: $dark_orange
+  border-color: $dark_orange
+  
 .display_inline_block
   display: inline-block !important
 // Header - header upper
@@ -126,16 +170,6 @@ span.spin
   position: relative
 .header_upper_content_container
   float: right
-.purple_outline_btn
-  text-transform: uppercase
-  color: $purple
-  border-color: $purple
-  padding: 11px 20px
-  line-height: 100%
-  margin-right: 20px
-.purple_outline_btn:hover
-  background-color: $purple
-  border-color: $purple
 .account_image_round
   width: 40px
   height: 40px
@@ -220,6 +254,7 @@ span.spin
   font-size: 16px
   font-weight: bold
   margin: 0
+#info_email
   max-width: calc(100% - 60px)
 .purple_text_floating_right
   position: absolute
@@ -257,10 +292,53 @@ span.spin
   max-width: 120px
   max-height: 120px
   margin-top: 10px
-.info_delete_account_p
-  padding: 20px 0
+#info_user_info_title
+  margin-bottom: 20px
+.info_form_row
+  width: 100%
+  margin-bottom: 20px
+.input_label
+  padding-bottom: 10px
+.input_text
+  width: 100%
+  padding: 10px 5px
+  border-radius: 3px
+  border: 1px solid #c7c7c7
+.input_select
+  width: 100%
+  padding: 10px 5px
+  border-radius: 3px
+  border: 1px solid #c7c7c7
+  line-height: 24px
+  font-family: $content_font
+.flag_optional
+  margin-left: 5px
+  font-size: 14px
+.input_birthdate_input_container
+  display: block
+  width: 100%
+#input_birthdate_day
+  display: inline-block
+  width: 15%
+#input_birthdate_month
+  display: inline-block
+  width: 60%
+#input_birthdate_year
+  display: inline-block
+  width: calc(25% - 9px)
+#info_change_password_title
+  margin-bottom: 20px
+.current_password_container
+  width: 100%
+  display: block
+  position: relative
+#purple_text_floating_right_forgot_password
+  top: 0
+  transform: none
+#info_delete_account_title
+  margin-bottom: 20px
 .job_alerts_a
   margin-left: 5px
   color: #157d9b !important
-#info_delete_account_title
-  margin-bottom: 20px
+#delete_account_btn
+  margin-top: 20px

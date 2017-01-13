@@ -2,45 +2,138 @@
 <div style="clear: both"></div>
 
 <div class="content">
-  <h2 class="page_title">Account Information</h2>
-  <h3 class="page_subtitle acc_info_page_subtitle">Email address</h3>
-  <div class="info_email_container spacer">
-    <% if(sessionStorage.email) { %>
-      <h4 class="page_subtitle_small acc_info_page_subtitle_small ellipsis"><%= sessionStorage.email %></h4>
-    <% } else { %>
-      <p class="page_subtitle_small error">An error occured trying to display email address</p>
-    <% } %>
-    <span class="purple_text_floating_right">modify</span>
-  </div>
-  <div class="info_social_accounts_container spacer">
-    <h3 class="page_subtitle acc_info_page_subtitle">Social accounts</h3>
-    <p class="info_social_accounts_p">Connect social accounts - quick and easy access to your social accounts</p>
-    <div class="social_accounts_row">
-      <img class="social_icon" src="img/FB_icon.png">
-      <span class="social_icon_span">Not linked</span><a class="social_icon_a" href="http://facebook.com" target="_blank">register via Facebook</a>
+  <div class="row justify-content-center">
+    <div class="col-12 col-sm-8">
+      <h2 class="page_title">Account Information</h2>
+      <h3 class="page_subtitle acc_info_page_subtitle">Email address</h3>
+      <div class="info_email_container spacer">
+        <% if(sessionStorage.email) { %>
+          <h4 id="info_email" class="page_subtitle_small acc_info_page_subtitle_small ellipsis"><%= sessionStorage.email %></h4>
+        <% } else { %>
+          <p class="page_subtitle_small error">An error occured trying to display email address</p>
+        <% } %>
+        <span class="purple_text_floating_right">modify</span>
+      </div>
+      <div class="info_social_accounts_container spacer">
+        <h3 class="page_subtitle acc_info_page_subtitle">Social accounts</h3>
+        <p class="info_social_accounts_p">Connect social accounts - quick and easy access to your social accounts</p>
+        <div class="social_accounts_row">
+          <img class="social_icon" src="img/FB_icon.png">
+          <span class="social_icon_span">Not linked</span><a class="social_icon_a" href="http://facebook.com" target="_blank">register via Facebook</a>
+        </div>
+        <div class="social_accounts_row">
+          <img class="social_icon" src="img/LI_icon.png">
+          <span class="social_icon_span">Not linked</span><a class="social_icon_a" href="http://linkedin.com" target="_blank">register via Linkedin</a>
+        </div>
+        <div class="social_accounts_row">
+          <img class="social_icon" src="img/GP_icon.png">
+          <span class="social_icon_span">Not linked</span><a class="social_icon_a" href="http://plus.google.com" target="_blank">register via Googleplus</a>
+        </div>
+      </div>
+      <div class="info_profile_photo_container spacer">
+        <h3 class="page_subtitle acc_info_page_subtitle">Profile photo</h3>
+        <img class="profile_photo" src="./img/no-pic.png">
+      </div>
+      <div class="info_user_info_container spacer">
+        <h3 id="info_user_info_title" class="page_subtitle acc_info_page_subtitle">User info</h3>
+        <form action="" id="user_info_form" method="post">
+          <div class="info_form_row">
+            <div class="half_width">
+              <fieldset>
+                <label for="input_first_name" class="page_subtitle_small input_label">First name</label>
+                <input type="text" id="input_first_name" class="input_text" placeholder="First name">
+              </fieldset>
+            </div>
+            <div class="half_width">
+              <fieldset>
+                <label for="input_last_name" class="page_subtitle_small input_label">Last name</label>
+                <input type="text" id="input_last_name" class="input_text" placeholder="Last name">
+              </fieldset>
+            </div>
+          </div>
+
+          <div class="info_form_row">
+            <fieldset>
+              <label for="select_gender" class="page_subtitle_small input_label">Gender</label><span class="flag_optional">(optional)</span>
+              <select name="select_gender" id="select_gender" class="input_select">
+                <option value="" selected>-- select gender --</option> 
+                <option value="male">male</option>
+                <option value="female">female</option>
+              </select>
+            </fieldset>
+          </div>
+
+          <div class="info_form_row">
+            <fieldset>
+              <label for="input_birthdate_year" class="page_subtitle_small input_label">Birthdate</label><span class="flag_optional">(optional)</span>
+              <div class="input_birthdate_input_container">
+                <input type="text" id="input_birthdate_day" class="input_text" placeholder="dd">
+                <select name="input_birthdate_month" id="input_birthdate_month" class="input_select">
+                  <option value="" selected>-- select month --</option> 
+                  <option value="jan">January</option>
+                  <option value="feb">February</option>
+                  <option value="mar">March</option>
+                  <option value="apr">April</option>
+                  <option value="may">May</option>
+                  <option value="jun">June</option>
+                  <option value="jul">July</option>
+                  <option value="aug">August</option>
+                  <option value="sep">September</option>
+                  <option value="oct">October</option>
+                  <option value="nov">November</option>
+                  <option value="dec">December</option>
+                </select>
+                <input type="text" id="input_birthdate_year" class="input_text" placeholder="yyyy">
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="info_form_row">
+            <fieldset>
+              <label for="input_phone" class="page_subtitle_small input_label">Phone number</label><span class="flag_optional">(optional)</span>
+              <input type="number" id="input_phone" class="input_text">
+            </fieldset>
+          </div>
+
+          <div class="info_form_row">
+            <button type="submit" id="save_changes_user_info" class="btn btn-primary orange_btn">save changes</button>
+          </div>
+        </form>
+      </div>
+      <div class="info_change_password_container spacer">
+        <h3 id="info_change_password_title" class="page_subtitle acc_info_page_subtitle">Change password</h3>
+        <form action="" id="user_password_form" method="post">
+          <div class="info_form_row">
+            <fieldset>
+              <div class="current_password_container">
+                <label for="input_current_password" class="page_subtitle_small input_label">Current password</label>
+                <div id="purple_text_floating_right_forgot_password" class="purple_text_floating_right">forgot password?</div>
+              </div>
+              <input type="password" id="input_current_password" class="input_text">
+            </fieldset>
+          </div>
+          
+          <div class="info_form_row">
+            <fieldset>
+              <label for="input_new_password" class="page_subtitle_small input_label">New password</label>
+              <input type="password" id="input_new_password" class="input_text">
+            </fieldset>
+          </div>
+          
+          <div class="info_form_row">
+            <fieldset>
+              <label for="input_confirm_new_password" class="page_subtitle_small input_label">Confirm new password</label>
+              <input type="password" id="input_confirm_new_password" class="input_text">
+            </fieldset>
+          </div>
+        </form>
+      </div>
+      <div class="info_delete_account_container spacer">
+        <h3 id="info_delete_account_title" class="page_subtitle acc_info_page_subtitle">Delete account</h3>
+        <span>You can also delete your account rather than</span><a class="job_alerts_a" href="#job_alerts">expand your Job Alerts</a>
+        <button type="button" id="delete_account_btn" class="btn btn-outline-primary red_outline_btn">delete account</button>
+      </div>
     </div>
-    <div class="social_accounts_row">
-      <img class="social_icon" src="img/LI_icon.png">
-      <span class="social_icon_span">Not linked</span><a class="social_icon_a" href="http://linkedin.com" target="_blank">register via Linkedin</a>
-    </div>
-    <div class="social_accounts_row">
-      <img class="social_icon" src="img/GP_icon.png">
-      <span class="social_icon_span">Not linked</span><a class="social_icon_a" href="http://plus.google.com" target="_blank">register via Googleplus</a>
-    </div>
-  </div>
-  <div class="info_profile_photo_container spacer">
-    <h3 class="page_subtitle acc_info_page_subtitle">Profile photo</h3>
-    <img class="profile_photo" src="./img/no-pic.png">
-  </div>
-  <div class="info_user_info_container spacer">
-    <h3 class="page_subtitle acc_info_page_subtitle">User info</h3>
-  </div>
-  <div class="info_change_password_container spacer">
-    <h3 id="acc_info_page_subtitle" class="page_subtitle">Change password</h3>
-  </div>
-  <div class="info_delete_account_container spacer">
-    <h3 id="info_delete_account_title" class="page_subtitle acc_info_page_subtitle">Delete account</h3>
-    <span class="info_delete_account_p">You can also delete your account rather than</span><a class="job_alerts_a" href="#job_alerts">expand your Job Alerts</a>
   </div>
 </div>
 
