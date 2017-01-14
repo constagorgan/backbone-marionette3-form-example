@@ -390,4 +390,5 @@ span.spin {
   color: #157d9b !important; }
 
 #delete_account_btn {
-  margin-top: 20px; }
+  margin-top: 20px;
+  display: block; }
