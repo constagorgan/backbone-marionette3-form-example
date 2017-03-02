@@ -101,7 +101,11 @@ span.spin
   z-index: 9
   background-color: rgba(0, 0, 0, 0.5)
   display: none
-  
+.dummy_title
+  margin: 50px 0
+.dummy_content
+  font-size: 16px
+  margin-bottom: 50px
 .clear 
   clear: both
 .right 
@@ -147,19 +151,20 @@ span.spin
   color: #fff
   border-color: $orange
   background-color: $orange
-  padding: 11px 30px
+  padding: 11px 0
   line-height: 100%
   font-size: 16px
   margin-left: auto
   display: block
   border-radius: 3px
+  width: 160px
 .orange_btn:hover
   background-color: $dark_orange
   border-color: $dark_orange
   
 .display_inline_block
   display: inline-block !important
-// Header - header upper
+// Header
 // ------------------------
 .header_upper
   padding: 10px 0
@@ -343,3 +348,42 @@ span.spin
 #delete_account_btn
   margin-top: 20px
   display: block
+// Footer
+// ------------------------
+.footer_content
+  background-color: $dark_gray
+  color: $text_color_light
+.footer_upper
+  padding: 50px 15px 10px 15px
+  border-bottom: 1px solid #666
+.footer_upper .row, .footer_middle .row
+  text-align: center
+  text-align: -webkit-center
+.footer_upper_col_title
+  margin-bottom: 30px
+  font-size: 24px
+  color: #fff
+  min-height: 24px
+.footer_upper_col_row
+  display: block
+  margin-bottom: 20px
+.footer_upper_col_row_container
+  margin-bottom: 50px
+#btn_placing_job
+  max-width: 160px
+  margin-left: 0
+  margin-bottom: 20px
+  width: auto
+.footer_middle
+  padding: 25px 15px 30px 15px
+.footer_middle_col_row
+  margin-bottom: 20px
+.footer_lower
+  padding: 20px 15px
+  background-color: #fff
+  
+// For >=768px screen width
+// ------------------------
+@media (min-width: 768px)
+  .footer_upper .row, .footer_middle .row
+    text-align: left
